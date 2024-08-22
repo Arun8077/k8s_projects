@@ -1,0 +1,14 @@
+apiVersion:
+kind: Ingress
+metadata:
+  name: dashborad-ingress
+  namspace:
+spec:
+  rules:
+  - host: dashboard.com
+    http:
+      paths:
+      - backend:
+          serviceName: kubernetes-dashboard
+          servicePort: 80
+

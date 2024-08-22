@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  templete:
+  template:
     metadata:
       name: nginx-pod
       labels:
@@ -17,6 +17,4 @@ spec:
       - name: nginx-container
         image: nginx:alpine
         ports:
-        - name: container Port
-          port: 80
-          protocol: TCP
+        - containerPort: 80

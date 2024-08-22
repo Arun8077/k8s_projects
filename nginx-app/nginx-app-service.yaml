@@ -9,4 +9,3 @@ spec:
   ports:
   - port: 8080
     targetPort: 80 # pod ports
-    nodePort: 30000

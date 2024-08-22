@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: nginx-app
+  annotations: kubernetes.io/
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  templete:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:alpine
+        ports:
+        - name: container Port
+          port: 80
+          protocol: TCP

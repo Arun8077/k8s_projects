@@ -8,6 +8,8 @@ spec:
   - host: dashboard.com
     http:
       paths:
-      - backend:
+      - path: /
+        pathType: Prefix
+        backend:
           serviceName: kubernetes-dashboard
           servicePort: 80
